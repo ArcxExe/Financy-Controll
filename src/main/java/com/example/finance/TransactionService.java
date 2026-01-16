@@ -41,7 +41,6 @@ public class TransactionService {
         transaction.getSum(),
         transaction.getDate(),
         transaction.getCategory().getName());
-    // transaction.getCategory() != null ? transaction.getCategory().getName() : b);
   }
 
   public Transaction create(BigDecimal sum, LocalDate date, String categoryName) {
