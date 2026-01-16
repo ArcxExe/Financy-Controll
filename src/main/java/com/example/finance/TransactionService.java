@@ -30,11 +30,18 @@ public class TransactionService {
   }
 
   private TransactionDTO convertToDTO(Transaction transaction) {
+    if (transaction.getCategory() == null) {
+      Category category = new Category("None", BigDecimal.valueOf(0.0));
+      transaction.setCategory(category);
+      categoryRepository.save(category);
+    }
+
     return new TransactionDTO(
         transaction.getId(),
         transaction.getSum(),
         transaction.getDate(),
         transaction.getCategory().getName());
+    // transaction.getCategory() != null ? transaction.getCategory().getName() : b);
   }
 
   public Transaction create(BigDecimal sum, LocalDate date, String categoryName) {

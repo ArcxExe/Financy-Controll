@@ -6,5 +6,4 @@ import com.example.finance.model.Transaction;
 
 public interface TransactionRepository extends JpaRepository<Transaction , Long> {
 
-  
 }
