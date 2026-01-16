@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.finance.dto.TransactionDTO;
-import com.example.finance.TransactionService;
+import com.example.finance.services.TransactionService;
 import com.example.finance.model.Transaction;
 import java.math.BigDecimal;
 import java.time.LocalDate;
