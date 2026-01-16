@@ -8,20 +8,12 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
 import java.time.LocalDate;
 import java.math.BigDecimal;
 
 //@Entity(name = "transaction") //name отвечается как сущность будет называться в запрос JPQL
 @Entity
-@Table(name = "transaction")
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
+@Table(name = "transactions")
 public class Transaction {
 
   @Id
@@ -34,5 +26,46 @@ public class Transaction {
   private Category category; // будет хранить все из category . В бд будет называться category_id
 
   private LocalDate date;
+
+  public Transaction(BigDecimal sum, Category category, LocalDate date) {
+    this.sum = sum;
+    this.category = category;
+    this.date = date;
+  }
+
+  public Transaction() {
+  }
+
+  public Long getId() {
+    return id;
+  }
+
+  public void setId(Long id) {
+    this.id = id;
+  }
+
+  public BigDecimal getSum() {
+    return sum;
+  }
+
+  public void setSum(BigDecimal sum) {
+    this.sum = sum;
+  }
+
+  public Category getCategory() {
+    return category;
+  }
+
+  public void setCategory(Category category) {
+    this.category = category;
+  }
+
+  public LocalDate getDate() {
+    return date;
+  }
+
+  public void setDate(LocalDate date) {
+    this.date = date;
+  }
 
 }
