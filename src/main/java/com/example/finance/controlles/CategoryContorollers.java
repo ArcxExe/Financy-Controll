@@ -45,8 +45,8 @@ public class CategoryContorollers {
   }
 
   @PutMapping(path = "/change_name")
-  public Category changeName(@RequestParam String name , @RequestParam String categoryName){
-    return service.changeName(name, categoryName);
+  public Category changeName(@RequestParam String newName , @RequestParam String categoryName){
+    return service.changeName(newName, categoryName);
   }
 
   @PutMapping(path = "/change_limits")
