@@ -10,10 +10,11 @@ REST API сервис для управления личными финанса�
 
 ## 🛠 Технический стек
 - Java 21
-- Framework: Spring Boot 3.x
+- Framework: Spring Boot 3
 - Database: PostgreSQL 
 - ORM: Spring Data JPA / Hibernate
 - Tools: Lombok, Maven
+- Tests: JUnit 5 , Mockito
 
 ## 🏗 Архитектура
 Проект построен по слоистой архитектуре (Layered Architecture):
